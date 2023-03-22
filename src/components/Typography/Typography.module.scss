@@ -1,0 +1,35 @@
+@import '../../styles/typography';
+
+/* variants */
+
+.Typography_h1 {
+  @include typography-h1;
+}
+
+.Typography_h2 {
+  @include typography-h2;
+}
+
+.Typography_h3 {
+  @include typography-h3;
+}
+
+.Typography_h4 {
+  @include typography-h4;
+}
+
+.Typography_p1 {
+  @include typography-p1;
+}
+
+.Typography_p2 {
+  @include typography-p2;
+}
+
+.Typography_p3 {
+  @include typography-p3;
+}
+
+.Typography_caption {
+  @include typography-caption;
+}

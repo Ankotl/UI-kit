@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tag component test Has right states 1`] = `
+<div>
+  <div
+    class="Tag Tag_sm Tag_selected"
+  />
+</div>
+`;
+
+exports[`Tag component test Has right states 2`] = `
+<div>
+  <div
+    class="Tag Tag_sm"
+  />
+</div>
+`;

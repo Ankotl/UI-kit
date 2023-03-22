@@ -1,0 +1,5 @@
+build
+node_modules
+.vscode
+junit.xml
+yarn-error.log

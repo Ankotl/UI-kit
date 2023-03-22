@@ -1,0 +1,76 @@
+@import './tokens/_colors';
+
+@mixin text-overflow($linesAmount: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @if $linesAmount > 1 {
+    /* stylelint-disable-next-line */
+    display: -webkit-box;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $linesAmount;
+    line-clamp: $linesAmount;
+  } @else {
+    white-space: nowrap;
+  }
+}
+
+@mixin button-reset {
+  appearance: none;
+  overflow: hidden;
+  margin: 0;
+  outline: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  user-select: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+@mixin clear-unordered-list {
+  &,
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+  }
+}
+
+@mixin scrollbar-small {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-clip: content-box;
+    background-color: $color-grey;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $color-grey;
+  }
+}

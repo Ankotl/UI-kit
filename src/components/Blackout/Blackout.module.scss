@@ -1,0 +1,15 @@
+@import '../../styles/tokens/_zIndex';
+
+.Blackout {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: $zindex-modal-backdrop;
+  background: rgb(2 8 64 / 55%);
+}
+
+.Blackout_pointer {
+  cursor: pointer;
+}

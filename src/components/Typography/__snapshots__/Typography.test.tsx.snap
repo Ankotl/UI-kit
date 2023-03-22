@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography component test Has right states 1`] = `
+<div>
+  <h1
+    class="Typography Typography_h1"
+  >
+    testText
+  </h1>
+</div>
+`;
+
+exports[`Typography component test Has right states 2`] = `
+<div>
+  <h2
+    class="Typography Typography_h2"
+  >
+    testText
+  </h2>
+</div>
+`;
+
+exports[`Typography component test Has right states 3`] = `
+<div>
+  <h3
+    class="Typography Typography_h3"
+  >
+    testText
+  </h3>
+</div>
+`;
+
+exports[`Typography component test Has right states 4`] = `
+<div>
+  <h4
+    class="Typography Typography_h4"
+  >
+    testText
+  </h4>
+</div>
+`;
+
+exports[`Typography component test Has right states 5`] = `
+<div>
+  <p
+    class="Typography Typography_p1"
+  >
+    testText
+  </p>
+</div>
+`;
+
+exports[`Typography component test Has right states 6`] = `
+<div>
+  <p
+    class="Typography Typography_p2"
+  >
+    testText
+  </p>
+</div>
+`;
+
+exports[`Typography component test Has right states 7`] = `
+<div>
+  <p
+    class="Typography Typography_p3"
+  >
+    testText
+  </p>
+</div>
+`;
+
+exports[`Typography component test Has right states 8`] = `
+<div>
+  <div
+    class="Typography Typography_caption"
+  >
+    testText
+  </div>
+</div>
+`;
+
+exports[`Typography component test Has right states 9`] = `
+<div>
+  <div
+    class="Typography Typography_h1"
+  >
+    testDivText
+  </div>
+</div>
+`;

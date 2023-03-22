@@ -1,0 +1,33 @@
+@import '../../styles/tokens/colors';
+@import '../../styles/tokens/zIndex';
+@import '../../styles/media';
+
+.Toast {
+  display: flex;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 10px 16px;
+
+  @include media-up(breakpoint-md) {
+    padding: 14px 22px;
+  }
+}
+
+.Toast__icon {
+  margin-top: -2px;
+  margin-right: 14px;
+}
+
+/* Variants */
+
+.Toast_success {
+  border-color: $color-green;
+  color: $color-green;
+  background-color: $color-light-green;
+}
+
+.Toast_error {
+  border-color: $color-red;
+  color: $color-red;
+  background-color: $color-light-red;
+}

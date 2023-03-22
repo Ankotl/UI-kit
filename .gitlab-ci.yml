@@ -1,0 +1,29 @@
+stages:
+  - test
+  - publish
+
+test:
+  image: node:latest
+  stage: test
+  before_script:
+    - npm install --force
+  script:
+    - npm run test:ci
+  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+  artifacts:
+    paths:
+      - coverage/
+    when: always
+    reports:
+      junit:
+        - junit.xml
+
+publish:
+  image: node:latest
+  stage: publish
+  script:
+    - npm install --force
+    - npm run build
+    - npm publish
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "QA"'

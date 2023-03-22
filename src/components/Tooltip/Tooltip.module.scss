@@ -1,0 +1,150 @@
+@import '../../styles/tokens/_colors';
+@import '../../styles/tokens/_zIndex';
+@import '../../styles/tokens/_shadows';
+@import '../../styles/_typography';
+
+.Tooltip {
+  @include typography-p2;
+
+  z-index: $zindex-dropdown;
+  border-radius: 20px;
+  padding: 12px 18px;
+  width: 100%;
+}
+
+.Tooltip[data-popper-interactive='false'] {
+  pointer-events: none;
+}
+
+/* Variants */
+
+.Tooltip_base {
+  box-shadow: $shadow-intense;
+  color: $color-dark-grey;
+  background: #fff;
+}
+
+.Tooltip_accent {
+  color: #fff;
+  background-color: $color-original-blue;
+}
+
+/* Arrow */
+/* NOTICE: origin from https://github.com/mohsinulhaq/react-popper-tooltip/blob/master/src/styles.css */
+
+.Tooltip__arrow {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    margin: auto;
+    border-style: solid;
+    width: 0;
+    height: 0;
+  }
+}
+
+/* Arrow placement & color */
+.Tooltip[data-popper-placement*='left'] {
+  .Tooltip__arrow {
+    right: 0;
+    margin-right: -0.7rem;
+  }
+
+  .Tooltip__arrow::after {
+    left: 3px;
+    top: -4px;
+    border-width: 13px 0 13px 16px;
+  }
+}
+
+.Tooltip_base[data-popper-placement*='left'] {
+  .Tooltip__arrow::after {
+    border-color: transparent transparent transparent #fff;
+  }
+}
+
+.Tooltip_accent[data-popper-placement*='left'] {
+  .Tooltip__arrow::after {
+    border-color: transparent transparent transparent $color-original-blue;
+  }
+}
+
+.Tooltip[data-popper-placement*='right'] {
+  .Tooltip__arrow {
+    left: 0;
+    margin-left: -0.7rem;
+  }
+
+  .Tooltip__arrow::after {
+    left: -2px;
+    top: -4px;
+    border-width: 13px 16px 13px 0;
+  }
+}
+
+.Tooltip_base[data-popper-placement*='right'] {
+  .Tooltip__arrow::after {
+    border-color: transparent #fff transparent transparent;
+  }
+}
+
+.Tooltip_accent[data-popper-placement*='right'] {
+  .Tooltip__arrow::after {
+    border-color: transparent $color-original-blue transparent transparent;
+  }
+}
+
+.Tooltip[data-popper-placement*='top'] {
+  .Tooltip__arrow {
+    left: 0;
+    bottom: 0;
+    margin-bottom: -1rem;
+  }
+
+  .Tooltip__arrow::after {
+    border-width: 16px 13px 0;
+  }
+}
+
+.Tooltip_base[data-popper-placement*='top'] {
+  .Tooltip__arrow::after {
+    border-color: #fff transparent transparent;
+  }
+}
+
+.Tooltip_accent[data-popper-placement*='top'] {
+  .Tooltip__arrow::after {
+    border-color: $color-original-blue transparent transparent transparent;
+  }
+}
+
+.Tooltip[data-popper-placement*='bottom'] {
+  .Tooltip__arrow {
+    left: 0;
+    top: 0;
+    margin-top: -0.4rem;
+  }
+
+  .Tooltip__arrow::after {
+    top: -6px;
+    border-width: 0 16px 13px;
+  }
+}
+
+.Tooltip_base[data-popper-placement*='bottom'] {
+  .Tooltip__arrow::after {
+    border-color: transparent transparent #fff;
+  }
+}
+
+.Tooltip_accent[data-popper-placement*='bottom'] {
+  .Tooltip__arrow::after {
+    border-color: transparent transparent $color-original-blue transparent;
+  }
+}

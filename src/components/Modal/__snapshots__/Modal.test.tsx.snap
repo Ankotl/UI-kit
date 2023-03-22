@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal component test Mounts correctly 1`] = `
+<body
+  style="overflow-y: hidden;"
+>
+  <div />
+  <div
+    class="ModalBody"
+  >
+    <div
+      class="ModalBody__content"
+      data-testid="modal-body"
+      style="opacity: 0.25; transform: translateY(-100%);"
+    >
+      <div
+        data-focus-guard="true"
+        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+        tabindex="0"
+      />
+      <div
+        class="ModalBody__focusLock"
+        data-focus-lock-disabled="false"
+      >
+        <div
+          class="Typography Typography_h2 ModalBody__title"
+          data-testid="modal-title"
+        >
+          title
+        </div>
+        test
+      </div>
+      <div
+        data-focus-guard="true"
+        style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+        tabindex="0"
+      />
+    </div>
+  </div>
+  <div
+    class="Blackout Blackout_pointer"
+    data-testid="modal-blackout"
+    style="opacity: 0;"
+  />
+</body>
+`;
+
+exports[`Modal component test Unmounts correctly 1`] = `
+<body
+  style=""
+>
+  <div />
+</body>
+`;

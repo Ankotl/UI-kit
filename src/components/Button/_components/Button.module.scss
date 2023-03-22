@@ -1,0 +1,97 @@
+@import '../../../styles/tokens/_colors';
+@import '../../../styles/tokens/_transitions';
+@import '../../../styles/_typography';
+@import '../../../styles/_mixins';
+
+.Button {
+  @include button-reset;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 8px 32px;
+  width: fit-content;
+  height: 40px;
+  font-family: $font-family-main, $font-family-default;
+  font-size: 16px;
+  line-height: 24px;
+  white-space: nowrap;
+  transition: color $transition-main, background-color $transition-main, border-color $transition-main;
+  cursor: pointer;
+}
+
+/* variants */
+
+.Button_primary {
+  border-color: $color-original-blue;
+  color: #fff;
+  background-color: $color-original-blue;
+
+  &:hover,
+  &:focus {
+    border-color: $color-green;
+    background-color: $color-green;
+  }
+
+  &:active {
+    border-color: $color-dark-blue;
+    background-color: $color-dark-blue;
+  }
+}
+
+.Button_secondary {
+  border-color: $color-original-blue;
+  color: $color-original-blue;
+  background-color: #fff;
+
+  &:hover,
+  &:focus {
+    border-color: $color-original-blue;
+    color: #fff;
+    background-color: $color-original-blue;
+  }
+
+  &:active {
+    border-color: $color-dark-blue;
+    color: #fff;
+    background-color: $color-dark-blue;
+  }
+}
+
+.Button_disabled {
+  border-color: $color-light-grey;
+  color: $color-grey;
+  background-color: $color-light-grey;
+  pointer-events: none;
+
+  &:hover,
+  &:focus {
+    border-color: $color-light-grey;
+    color: $color-grey;
+    background-color: $color-light-grey;
+  }
+}
+
+/* icons */
+
+.Button__icon {
+  width: 20px;
+  height: 20px;
+  color: inherit;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.Button__iconLeft {
+  margin-right: 6px;
+}
+
+.Button__iconRight {
+  margin-left: 6px;
+}

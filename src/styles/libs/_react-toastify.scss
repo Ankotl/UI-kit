@@ -1,0 +1,114 @@
+@import '../tokens/_zIndex';
+@import '../media';
+/* stylelint-disable keyframes-name-pattern */
+
+/* Toastify className namespace */
+$toastify-namespace: 'Toastify';
+
+.#{$toastify-namespace}--animate {
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+}
+
+@keyframes #{$toastify-namespace}__bounceInRight {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes #{$toastify-namespace}__bounceOutRight {
+  20% {
+    opacity: 1;
+    transform: translate3d(-20px, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0);
+  }
+}
+
+.#{$toastify-namespace}__bounce-enter {
+  &--top-right,
+  &--bottom-right {
+    animation-name: #{$toastify-namespace}__bounceInRight;
+  }
+}
+
+.#{$toastify-namespace}__bounce-exit {
+  &--top-right,
+  &--bottom-right {
+    animation-name: #{$toastify-namespace}__bounceOutRight;
+  }
+}
+
+/* Toasify Container */
+
+.#{$toastify-namespace}__toast-container {
+  position: fixed;
+  z-index: $zindex-tooltip;
+  padding: 4px;
+  width: 100%;
+  transform: translate3d(0, 0, $zindex-tooltip px);
+
+  div + div {
+    margin-top: 12px;
+  }
+
+  &--top-right {
+    top: 16px;
+  }
+
+  @include media-up(breakpoint-sm) {
+    right: 12px;
+    max-width: 354px;
+  }
+
+  @include media-up(breakpoint-md) {
+    &--top-right {
+      top: 28px;
+    }
+  }
+}
+
+/* For auto close trigger */
+
+@keyframes #{$toastify-namespace}__trackProgress {
+  0% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+.#{$toastify-namespace}__progress-bar {
+  animation: #{$toastify-namespace}__trackProgress linear 1;
+}

@@ -1,0 +1,66 @@
+@import '../../styles/tokens/_colors';
+@import '../../styles/_typography';
+
+.ProgressCircle__svg {
+  circle {
+    &:first-of-type {
+      stroke: $color-light-grey;
+    }
+  }
+
+  text {
+    @include typography-p1;
+
+    color: #000;
+  }
+}
+
+.ProgressCircle__svg_anim {
+  circle {
+    &:last-of-type {
+      stroke: $color-light-grey;
+    }
+  }
+
+  text {
+    @include typography-p1;
+
+    color: #000;
+  }
+}
+
+.ProgressCircle__svg_red {
+  circle {
+    &:last-of-type {
+      stroke: $color-red;
+    }
+  }
+
+  text {
+    color: $color-red;
+  }
+}
+
+.ProgressCircle__svg_green {
+  circle {
+    &:last-of-type {
+      stroke: $color-green;
+    }
+  }
+
+  text {
+    color: $color-green;
+  }
+}
+
+.ProgressCircle__svg_blue {
+  circle {
+    &:first-of-type {
+      stroke: $color-original-blue;
+    }
+  }
+
+  text {
+    color: $color-original-blue;
+  }
+}

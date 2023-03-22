@@ -1,0 +1,17 @@
+@import './typography';
+
+@font-face {
+  src: url('../assets/fonts/Roboto-Regular.woff2') format('woff2'), url('../assets/fonts/Roboto-Regular.woff') format('woff'), url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-family: $font-family-main;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: url('../assets/fonts/Cabin-Regular.woff2') format('woff2'), url('../assets/fonts/Cabin-Regular.woff') format('woff'), url('../assets/fonts/Cabin-Regular.ttf') format('truetype');
+  font-family: $font-family-secondary;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

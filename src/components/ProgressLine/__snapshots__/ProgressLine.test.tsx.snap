@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressLine component test Has right states 1`] = `
+<div>
+  <div
+    class="ProgressLine__line ProgressLine__mainLine"
+  >
+    <div
+      class="ProgressLine__line ProgressLine__secondaryLine"
+      style="width: 80%;"
+    />
+  </div>
+</div>
+`;

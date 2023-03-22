@@ -1,0 +1,22 @@
+@import '../../styles/tokens/_colors';
+@import '../../styles/tokens/_transitions';
+
+.ProgressLine__line {
+  border-radius: 10px;
+}
+
+.ProgressLine__mainLine {
+  position: relative;
+  overflow: hidden;
+  height: 6px;
+  background-color: $color-light-grey;
+}
+
+.ProgressLine__secondaryLine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: $color-green;
+  transition: width $transition-main;
+}

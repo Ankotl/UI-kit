@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component test Has right states 1`] = `
+<div>
+  <button
+    class="Button Button_primary"
+    style="position: relative; overflow: hidden;"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`Button component test Has right states 2`] = `
+<div>
+  <button
+    class="Button Button_primary Button_disabled"
+    tabindex="-1"
+  >
+    Button
+    <div
+      class="Button__icon Button__iconRight"
+    >
+      <svg
+        class="Spinner Spinner__sm"
+        color="currentColor"
+        preserveAspectRatio="xMidYMid"
+        viewBox="0 0 100 100"
+      >
+        <circle
+          cx="50"
+          cy="50"
+          fill="none"
+          r="35"
+          stroke="currentColor"
+          stroke-dasharray="164.93361431346415 56.97787143782138"
+          stroke-width="6"
+        >
+          <animatetransform
+            attributeName="transform"
+            dur="1s"
+            keyTimes="0;1"
+            repeatCount="indefinite"
+            type="rotate"
+            values="0 50 50;360 50 50"
+          />
+        </circle>
+      </svg>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`Button component test Has right states 3`] = `
+<div>
+  <button
+    class="Button Button_primary Button_disabled"
+    tabindex="-1"
+  >
+    Button
+  </button>
+</div>
+`;

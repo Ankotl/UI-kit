@@ -1,0 +1,35 @@
+@import './tokens/_colors';
+@import './tokens/_transitions';
+@import './_typography';
+
+@mixin input-usual {
+  @include typography-p2;
+
+  outline: none;
+  border: 1px solid $color-grey;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 100%;
+  height: 40px;
+  color: $color-black;
+  background-color: #fff;
+  transition: border-color $transition-main, color $transition-main;
+
+  &::placeholder {
+    color: $color-grey;
+  }
+
+  &:focus {
+    border-color: $color-original-blue;
+    color: $color-original-blue;
+  }
+}
+
+@mixin input-error {
+  border-color: $color-red;
+  color: $color-red;
+}
+
+@mixin input-disabled {
+  background-color: $color-bg;
+}

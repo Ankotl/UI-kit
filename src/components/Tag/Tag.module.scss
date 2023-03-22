@@ -1,0 +1,38 @@
+@import '../../styles/_typography';
+@import '../../styles/tokens/_colors';
+@import '../../styles/tokens/_transitions';
+
+.Tag {
+  align-items: center;
+  border: none;
+  border-radius: 100px;
+  width: fit-content;
+  color: $color-black;
+  background: $color-bg;
+  transition: color $transition-main, background-color $transition-main;
+
+  &:hover {
+    color: $color-original-blue;
+  }
+}
+
+.Tag_selected {
+  color: #fff;
+  background-color: $color-original-blue;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.Tag_lg {
+  @include typography-p1;
+
+  padding: 4px 14px;
+}
+
+.Tag_sm {
+  @include typography-p3;
+
+  padding: 4px 12px;
+}

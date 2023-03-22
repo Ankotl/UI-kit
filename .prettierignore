@@ -1,0 +1,5 @@
+*.scss
+src/graphql/types.ts
+coverage
+.storybook
+node_modules
